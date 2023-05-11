@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest</title>
+</head>
+<body>
+<div th:switch="${quest}">
+    <table>
+        <thead>
+        <tr>
+            <th>| id |</th>
+            <th>| questText   | </th>
+            <th>| questTitle  |</th>
+            <th>| personId |  </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="quest : ${quest}">
+            <td th:text="${quest.questId}"></td>
+            <td th:text="${quest.questText}"></td>
+            <td th:text="${quest.questTitle}"></td>
+            <td th:text="${quest.personId}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>

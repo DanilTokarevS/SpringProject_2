@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create quest</title>
+</head>
+<body>
+<form action="#" th:action="@{/quest-create}" th:object="${quest}" method="post">
+    <label for="questText">username</label>
+    <input type="text" th:field="*{questText}" id="questText" placeholder="questText">
+    <label for="questTitle">questTitle</label>
+    <input type="text" th:field="*{questTitle}" id="questTitle" placeholder="questTitle">
+    <label for="personId">balance</label>
+    <input type="text" th:field="*{personId}" id="personId" placeholder="personId">
+    <input type="submit" value="Create quest">
+</form>
+</body>
+</html>
